@@ -1,13 +1,7 @@
 <template>
-  <div>
-    <h1>Weather App</h1>
-  </div>
+  <time datetime="2025-08-24">24.08.2025</time>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
