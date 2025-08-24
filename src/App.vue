@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <h1>Weather App</h1>
-  </div>
+  <time :datetime="date">{{ date }}</time>
 </template>
 
 <script setup>
 
+const date = new Date().toLocaleDateString();
+
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
