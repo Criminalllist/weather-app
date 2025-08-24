@@ -1,1 +1,8 @@
 @use './libs/normalize';
+@use './helpers';
+
+body {
+  font-family: var(--font-family-primary);
+  background-color: var(--background-app);
+  color: var(--color-light);
+}
