@@ -1,7 +1,11 @@
 <template>
-  <time datetime="2025-08-24">24.08.2025</time>
+  <time :datetime="date">{{ date }}</time>
 </template>
 
-<script setup></script>
+<script setup>
+
+const date = new Date().toLocaleDateString();
+
+</script>
 
 <style lang="scss" scoped></style>
