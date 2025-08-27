@@ -1,21 +1,98 @@
 :root {
-  --font-family-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-primary:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  --font-size-s: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-m: 1.25rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2.5rem;
+
+  // Spacing system (based on 1rem = 20px on desktop, 14px on mobile)
+  --spacing-xs: 0.5rem;
+  --spacing-s: 0.75rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  // Container sizes
+  --container-max-width: 1200px;
+  --container-padding: var(
+    --spacing-xxl
+  );
+
+  // Breakpoints (for reference)
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1200px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   --color-light: #fff;
   --color-dark: #000;
-  --color-secondary: #3F4958;
-  
+  --color-secondary: #3f4958;
 
-  --background-app: #343D4B;
+  --background-app: #343d4b;
   --background-base: #222831;
-  --background-card-base: #272E37;
-  --background-card-active: #3A434F;
-  --background-card-hover: #3A434F;
+  --background-card-base: #272e37;
+  --background-card-active: #3a434f;
+  --background-card-hover: #3a434f;
 
-  --gradient-base: linear-gradient(91deg, rgba(144, 217, 224, 0.90) 0.2%, rgba(84, 96, 230, 0.90) 100%);
-  --gradient-hover: linear-gradient(256deg, rgba(144, 217, 224, 0.90) 9.04%, rgba(84, 96, 230, 0.90) 92.2%);
+  --gradient-base: linear-gradient(
+    91deg,
+    rgba(
+        144,
+        217,
+        224,
+        0.9
+      )
+      0.2%,
+    rgba(
+        84,
+        96,
+        230,
+        0.9
+      )
+      100%
+  );
+  --gradient-hover: linear-gradient(
+    256deg,
+    rgba(
+        144,
+        217,
+        224,
+        0.9
+      )
+      9.04%,
+    rgba(
+        84,
+        96,
+        230,
+        0.9
+      )
+      92.2%
+  );
 
-  --shadow-base: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow-base: 0px
+    4px
+    4px
+    0px
+    rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
 
   --border-radius-large: 30px;
   --border-radius-medium: 10px;

@@ -1,8 +1,48 @@
-@use './libs/normalize';
-@use './helpers';
+@use "./libs/normalize";
+@use "./helpers";
+
+html {
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
 
 body {
-  font-family: var(--font-family-primary);
-  background-color: var(--background-app);
-  color: var(--color-light);
+  display: grid;
+  place-items: center;
+  align-content: center;
+  font-family: var(
+    --font-family-primary
+  );
+  background-color: var(
+    --background-app
+  );
+  color: var(
+    --color-light
+  );
+  font-size: var(
+    --font-size-base
+  );
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(
+    100%
+  );
+  clip: rect(
+    0
+      0
+      0
+      0
+  );
+  overflow: hidden;
 }
