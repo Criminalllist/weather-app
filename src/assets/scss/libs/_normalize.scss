@@ -11,12 +11,19 @@
  * 4. Use the user's configured `mono` font-family by default.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace; /* 4 */
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    "SF Mono",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace; /* 4 */
 }
 
 /* Sections
@@ -35,7 +42,20 @@ body {
  */
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Liberation Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 /**
@@ -55,7 +75,8 @@ hr {
  */
 
 abbr[title] {
-  text-decoration: underline dotted;
+  text-decoration: underline
+    dotted;
 }
 
 /**
@@ -76,7 +97,14 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    "SF Mono",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -156,6 +184,10 @@ input {
   overflow: visible;
 }
 
+button {
+  border: none;
+}
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -198,7 +230,9 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 1px
+    dotted
+    ButtonText;
 }
 
 /**
@@ -206,7 +240,9 @@ button:-moz-focusring,
  */
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: 0.35em
+    0.75em
+    0.625em;
 }
 
 /**
@@ -334,7 +370,9 @@ body {
  * A elements that don't have a class get default styles
  */
 
-a:not([class]) {
+a:not(
+  [class]
+) {
   text-decoration-skip-ink: auto;
 }
 
@@ -371,7 +409,7 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -395,7 +433,9 @@ input[type="search"]::-webkit-search-cancel-button {
  */
 
 :focus-visible {
-  outline: 2px solid #007acc;
+  outline: 2px
+    solid
+    #007acc;
   outline-offset: 2px;
 }
 
@@ -443,46 +483,56 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  
+
   a,
   a:visited {
     text-decoration: underline;
   }
-  
+
   a[href]:after {
-    content: " (" attr(href) ")";
+    content: " ("
+      attr(
+        href
+      )
+      ")";
   }
-  
+
   abbr[title]:after {
-    content: " (" attr(title) ")";
+    content: " ("
+      attr(
+        title
+      )
+      ")";
   }
-  
+
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px
+      solid
+      #999;
     page-break-inside: avoid;
   }
-  
+
   thead {
     display: table-header-group;
   }
-  
+
   tr,
   img {
     page-break-inside: avoid;
   }
-  
+
   img {
     max-width: 100% !important;
   }
-  
+
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-  
+
   h2,
   h3 {
     page-break-after: avoid;

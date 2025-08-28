@@ -15,7 +15,6 @@ export default [
     rules: {
       "vue/multi-word-component-names": "off",
       "vue/require-default-prop": "off",
-      // Add rules for unused variables
       "no-unused-vars": "error",
       "vue/no-unused-vars": "error",
       "vue/no-unused-properties": "error"
