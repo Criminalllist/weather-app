@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-const { title, value } = defineProps({
+defineProps({
   title: {
     type: String,
     required: true,
