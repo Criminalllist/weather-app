@@ -2,29 +2,37 @@
   <section class="stats">
     <h2 class="visually-hidden">Статистика</h2>
     <ul class="stats-list">
-      <StatsItem v-for="{ title, value } in items" :key="title" :title :value />
+      <StatsItem v-for="item in modifiedData" :key="item.title" v-bind="item" />
     </ul>
   </section>
 </template>
 
 <script setup>
+import { ref, computed } from "vue";
 import StatsItem from "./StatsItem.vue";
 
-const items = [
-  {
-    title: "Влажность",
-    value: "90%",
-  },
-  {
-    title: "Осадки",
-    value: "20 мм",
-  },
+let data = ref({
+  humidity: 90,
+  precipitation: 20,
+  wind: 10,
+});
 
-  {
-    title: "Ветер",
-    value: "10 м/с",
-  },
-];
+const modifiedData = computed(() => {
+  return [
+    {
+      label: "Влажность",
+      value: `${data.value.humidity} %`,
+    },
+    {
+      label: "Осадки",
+      value: `${data.value.precipitation} мм`,
+    },
+    {
+      label: "Ветер",
+      value: `${data.value.wind} м/с`,
+    },
+  ];
+});
 </script>
 
 <style lang="scss" scoped>

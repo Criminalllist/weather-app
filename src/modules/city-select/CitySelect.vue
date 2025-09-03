@@ -1,18 +1,17 @@
 <template>
   <div class="city-select">
-    <AppButton class="city-select__button" @click="changeCity">
+    <AppButton v-if="!isEdited" class="city-select__button" @click="changeCity">
       <template #button-icon>
         <Icon name="location" width="33" height="33" viewBox="0 0 33 33" />
       </template>
       Изменить город
     </AppButton>
 
-    <div class="city-select__field">
-      <AppInput placeholder="Введите город" />
+    <div v-else class="city-select__field">
+      <AppInput v-model="currentCity" placeholder="Введите город" />
       <AppButton @click="selectCity" />
     </div>
   </div>
-  {{ isEdited }}
 </template>
 
 <script setup>
@@ -22,6 +21,7 @@ import AppButton from "@/common/components/AppButton.vue";
 import Icon from "@/common/components/AppIcon.vue";
 
 const emits = defineEmits(["select-city"]);
+
 let isEdited = ref(false);
 
 const changeCity = () => {
@@ -30,12 +30,15 @@ const changeCity = () => {
 
 const selectCity = () => {
   isEdited.value = false;
-  emits("select-city", "moscow");
+  emits("select-city", currentCity.value);
 };
+
+const currentCity = ref("");
 </script>
 
 <style lang="scss" scoped>
 .city-select {
+  min-width: 420px;
   &__button {
     display: flex;
     justify-content: center;

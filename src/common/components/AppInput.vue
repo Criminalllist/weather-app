@@ -1,5 +1,5 @@
 <template>
-  <input class="app-input" :type="type" :placeholder="placeholder" />
+  <input v-model="modelValue" class="app-input" :type="type" :placeholder="placeholder" />
 </template>
 
 <script setup>
@@ -13,11 +13,14 @@ defineProps({
     default: "",
   },
 });
+
+const modelValue = defineModel({ type: String, required: true });
 </script>
 
 <style lang="scss" scoped>
 .app-input {
   width: 100%;
+  height: 53px;
   padding: var(--spacing-xs) var(--spacing-s);
   color: var(--color-light);
   font-size: var(--font-size-m);
