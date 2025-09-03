@@ -1,13 +1,13 @@
 <template>
   <li class="stats-item">
-    <h3 class="stats-item__title">{{ title }}</h3>
+    <h3 class="stats-item__title">{{ label }}</h3>
     <p class="stats-item__value">{{ value }}</p>
   </li>
 </template>
 
 <script setup>
 defineProps({
-  title: {
+  label: {
     type: String,
     required: true,
   },

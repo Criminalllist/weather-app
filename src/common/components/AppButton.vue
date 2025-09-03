@@ -15,6 +15,7 @@
   align-items: center;
   gap: var(--spacing-xs);
   padding: var(--spacing-s);
+  height: 53px;
 
   color: var(--color-light);
   font-size: var(--font-size-base);
