@@ -1,5 +1,5 @@
 <template>
-  <div class="city-select">
+  <section class="city-select">
     <AppButton v-if="!isEdited" class="city-select__button" @click="changeCity">
       <template #button-icon>
         <Icon name="location" width="33" height="33" viewBox="0 0 33 33" />
@@ -8,32 +8,39 @@
     </AppButton>
 
     <div v-else class="city-select__field">
-      <AppInput v-model="currentCity" placeholder="Введите город" />
+      <AppInput
+        v-model="currentCity"
+        placeholder="Введите город"
+        @keyup.enter="selectCity"
+      />
       <AppButton @click="selectCity" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import AppInput from "@/common/components/AppInput.vue";
 import AppButton from "@/common/components/AppButton.vue";
 import Icon from "@/common/components/AppIcon.vue";
 
 const emits = defineEmits(["select-city"]);
 
-let isEdited = ref(false);
+const isEdited = ref(false);
+const currentCity = ref("");
 
 const changeCity = () => {
   isEdited.value = true;
 };
 
-const selectCity = () => {
-  isEdited.value = false;
-  emits("select-city", currentCity.value);
-};
+onMounted(() => {
+  emits("select-city", "Москва");
+});
 
-const currentCity = ref("");
+const selectCity = async () => {
+  emits("select-city", currentCity.value);
+  isEdited.value = false;
+};
 </script>
 
 <style lang="scss" scoped>
